@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", system-ui, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+/* Main Container */
+.container {
+    width: 100%;
+    padding: 20px;
+}
+
+/* Calculator Card */
+.calculator {
+    max-width: 620px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 40px;
+}
+
+/* Heading */
+.calculator h1 {
+    font-size: 52px;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.calculator h1 span {
+    color: #4fd1c5;
+}
+
+/* Input Box */
+.input-box {
+    display: flex;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+/* Date Input */
+.input-box input {
+    flex: 1;
+    padding: 14px 16px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+/* Button */
+.input-box button {
+    padding: 14px 28px;
+    border-radius: 8px;
+    border: none;
+    background: #4fd1c5;
+    color: #083344;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.input-box button:hover {
+    background: #38b2ac;
+}
+
+/* Result Text */
+#result {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+#result span {
+    color: #4fd1c5;
+    font-weight: 600;
+}
+
+/* ============================= */
+/* Mobile Responsiveness Fix */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    body {
+        align-items: flex-start;
+    }
+
+    .container {
+        padding-top: 60px; /* FIXED top margin issue */
+    }
+
+    .calculator {
+        padding: 25px;
+    }
+
+    .calculator h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .input-box {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .input-box button {
+        width: 100%;
+    }
+
+    #result {
+        text-align: center;
+    }
+}
